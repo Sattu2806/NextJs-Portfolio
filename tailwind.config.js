@@ -28,10 +28,10 @@ module.exports = {
         background: "#303336",
     },
       backgroundImage: (theme) => ({
-        "gradient-primary": `linear-gradient(to right, ${theme(
-          "colors.green"
-        )}, ${theme("colors.black")})`,
-        "gradient-primary-2":
+//         gradient-primary: `linear-gradient(to right, ${theme(
+//           "colors.green"
+//         )}, ${theme("colors.black")})`,
+        gradient-primary-2:
           "linear-gradient(140.3deg, rgba(44, 47, 50, 0.99) 15.21%, rgba(28, 29, 30, 0.94) 29.99%, rgba(40, 41, 41, 0.8) 46.43%, rgba(16, 16, 16, 0.71) 64.3%, rgba(25, 25, 26, 0.3) 86.01%)",
       }),
     },
