@@ -13,6 +13,20 @@ module.exports = {
         Roboto_mono: "Roboto Mono , monospace",
         Dm_Sans: "'DM Sans , sans-serif",
       },
+      colors: {
+        green: "#48bf53",
+        white: "#ffffff",
+        black: "#000000",
+        gray: "#888888",
+        gray2: "#242B2E",
+        gray3: "#1E1F21",
+        darkgray: "#1A1C20",
+        light_gray: "#ececec",
+        red: "#DD0031",
+        blue: "#1560BD",
+        react: "#61DBFB",
+        background: "#303336",
+    },
       backgroundImage: (theme) => ({
         "gradient-primary": `linear-gradient(to right, ${theme(
           "colors.green"
@@ -46,20 +60,6 @@ module.exports = {
       "4xl": "2.441rem",
       "5xl": "3.052rem",
       "6xl": "4rem",
-    },
-    colors: {
-      green: "#48bf53",
-      white: "#ffffff",
-      black: "#000000",
-      gray: "#888888",
-      gray2: "#242B2E",
-      gray3: "#1E1F21",
-      darkgray: "#1A1C20",
-      light_gray: "#ececec",
-      red: "#DD0031",
-      blue: "#1560BD",
-      react: "#61DBFB",
-      background: "#303336",
     },
     boxShadow: {
       xl: "0px 4px 40px 1px rgb(76 33 33 / 50%)",
