@@ -5,6 +5,8 @@ import {IoLogoTwitter} from "react-icons/io"
 import {AiOutlineGithub} from "react-icons/ai"
 import {HiMail} from "react-icons/hi"
 import {RxHamburgerMenu} from "react-icons/rx"
+import {inter, dm_sans, roboto_mono} from "../utils/font"
+
 
 const Header = () => {
   const [servicesHovered, setServicesHovered] = useState(false);
@@ -78,14 +80,14 @@ const Header = () => {
   }, []);
 
   return (
-    <section className='font-Inter'>
+    <section className={inter.className}>
       <div className={`flex relative items-center justify-between h-20 text-white ${below1050 ? "w-full p-2" : "m-auto w-11/12"} ${isMobile ? "bg-darkgray w-full" : ""}`}>
         <div className={`name cursor-pointer p-0 m-0 ${below850 ? "text-2xl" : "text-3xl"}`}>
-          <span className='font-Dm_Sans font-medium hover:text-green ease-in duration-200'>Sattu </span>
+        <span className={`${dm_sans.className} font-medium hover:text-green ease-in duration-200`}>Sattu</span>
           <span>Code</span>
         </div>
 
-      <div className={`middle-nav ease-in duration-300 font-Roboto_mono ${isMobile ? "mt-44 absolute right-0 top-[-100px] bg-darkgray w-full z-40" : (below850 ? "mt-[-500px] " : "")}`} onClick={() => setMobile(false)}>
+      <div className={`middle-nav ease-in duration-300 ${roboto_mono.className} ${isMobile ? "mt-44 absolute right-0 top-[-100px] bg-darkgray w-full z-40" : (below850 ? "mt-[-500px] " : "")}`} onClick={() => setMobile(false)}>
           <ul className={`${below850 ? " block text-center space-y-6" :"flex space-x-6 items-center"}`}>
           <Link href="#services" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="flex items-center">
             <BiChevronLeft className={`inline ${servicesHovered ? 'opacity-100 ease-in duration-300 text-green text-2xl' : 'opacity-0 ease-in duration-300'}`} />

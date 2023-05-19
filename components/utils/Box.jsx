@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { SiAntdesign } from "react-icons/si";
 import {BiCodeAlt} from "react-icons/bi"
 import {TbSeo} from "react-icons/tb"
+import {inter, dm_sans,roboto_mono} from "./font"
 
 
 const Box = ({ headline, desc, project, }) => {
@@ -31,7 +32,7 @@ const Box = ({ headline, desc, project, }) => {
       };
   }, [])
   return (
-    <section className={`flex justify-between items-baseline cursor-pointer ${lower975 ? "w-11/12": "w-10/12"} ${lower790 ? "w-9/12 ": ""} m-auto text-white ease-in duration-300 ${isHovered ? "shadow-4xl" : ""} p-8 font-Roboto_mono bg-background rounded-xl`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <section className={`flex justify-between items-baseline cursor-pointer ${lower975 ? "w-11/12": "w-10/12"} ${lower790 ? "w-9/12 ": ""} m-auto text-white ease-in duration-300 ${isHovered ? "shadow-4xl" : ""} p-8 ${roboto_mono.className} bg-background rounded-xl`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <div className="text">
         <h1 className={`text-3xl ease-in duration-300 ${isHovered ? "text-green" : ""} `}>{headline}</h1>
         <p className="opacity-70 mt-2 mb-5">{desc}</p>

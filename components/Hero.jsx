@@ -1,3 +1,4 @@
+'use client'
 import React, { Fragment, useState, useEffect } from "react";
 import heroImage from "../public/1.png";
 import Image from "next/image";
@@ -5,6 +6,7 @@ import {RiAngularjsLine} from "react-icons/ri"
 import {IoLogoNodejs} from "react-icons/io"
 import {FaPython} from "react-icons/fa"
 import {FaReact} from "react-icons/fa"
+import {inter, dm_sans, roboto_mono} from "./utils/font"
 
 const Hero = () => {
     const [below1300, setbelow1300] = useState(false);
@@ -23,7 +25,6 @@ const Hero = () => {
         }
     
         window.addEventListener('resize', handleResize);
-    
         return () => {
           window.removeEventListener('resize', handleResize);
         };
@@ -31,7 +32,7 @@ const Hero = () => {
   return (
     <Fragment>
         { !below1000 ? (
-      <section className={` grid ${below1250 ? "grid-cols-1" : "grid-cols-2"} grid-cols-2 w-10/12 ${below1200 ? "w-11/12" : "w-10/12"} m-auto mt-24 font-Roboto_mono`}>
+      <section className={` grid ${below1250 ? "grid-cols-1" : "grid-cols-2"} grid-cols-2 w-10/12 ${below1200 ? "w-11/12" : "w-10/12"} m-auto mt-24 ${roboto_mono.className}`}>
         <div className="text-elements inline-flex relative text-white flex-col">
           <div className={`w-10/12 ${below1300 ? "ml-0" : "ml-10"}`}>
             <div>
@@ -55,19 +56,19 @@ const Hero = () => {
             <div className="year flex items-center">
               <p className={` mr-4 ${below1200 ? "text-4xl" : "text-5xl"}`}>12</p>
               <div className={`opacity-75 ${below1200 ? "text-sm" : "text-base"}`}>
-                Years <p>of Experience</p>{" "}
+                Years <p>of Experience</p>
               </div>
             </div>
             <div className="projects flex items-center justify-between">
               <p className={` mr-4 ${below1200 ? "text-4xl" : "text-5xl"}`}>165</p>
               <div className={`opacity-75 ${below1200 ? "text-sm" : "text-base"}`}>
-                Project completed <p>with 18 companies</p>{" "}
+                Project completed <p>with 18  companies</p>
               </div>
             </div>
           </div>
         </div>
         <div className=" image-elements relative">
-          <div class="flex justify-end items-center bg-gradient-primary-2 absolute bottom-0">
+          <div className="flex justify-end items-center bg-gradient-primary-2 absolute bottom-0">
             <span className="absolute top-20 right-28 bg-gray3 shadow-3xl w-8 h-8 flex items-center justify-center rounded-50">
                 <FaPython className="text-2xl text-blue"/>
             </span>
@@ -81,7 +82,6 @@ const Hero = () => {
                 <FaReact className="text-2xl text-react" />
             </span>
             <Image
-              className={``}
               src={heroImage}
               alt="Picture of the author"
             />
@@ -90,7 +90,7 @@ const Hero = () => {
       </section> ) 
       : 
       (
-        <section className={` flex flex-col-reverse w-11/12 m-auto font-Roboto_mono`}>
+        <section className={` flex flex-col-reverse w-11/12 m-auto ${roboto_mono.className}`}>
         <div className={`text-elements relative text-white  w-10/12 m-auto ${below600 ? "w-11/12": ""}`}>
           <div className={`w-10/12 m-auto ${below600 ? "w-full": ""}`}>
             <div>
@@ -126,7 +126,7 @@ const Hero = () => {
           </div>
         </div>
         <div className=" image-elements relative mt-16 mb-20">
-          <div class="flex justify-end items-center bg-gradient-primary-2 w-8/12 m-auto">
+          <div className="flex justify-end items-center bg-gradient-primary-2 w-8/12 m-auto">
             <span className={`absolute bg-gray3 shadow-3xl w-8 h-8 flex items-center justify-center rounded-50 ${below600 ? "hidden" : "top-10 right-48"}`}>
                 <FaPython className="text-2xl text-blue"/>
             </span>

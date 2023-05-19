@@ -3,10 +3,11 @@ import { IoLogoTwitter } from "react-icons/io";
 import { AiOutlineGithub } from "react-icons/ai";
 import { GrCodepen } from "react-icons/gr";
 import { BsYoutube } from "react-icons/bs";
+import {inter, dm_sans, roboto_mono} from "../utils/font"
 
 const Footer = () => {
   return (
-    <section id="contact" className="bg-gray3 font-Dm_Sans">
+    <section id="contact" className={`bg-gray3 ${dm_sans.className} `}>
       <div className="text-white flex flex-col items-center  py-16">
         <div className="w-36 h-12 border flex items-center justify-center my-8 hover:border-green cursor-pointer">
           <h1 className="text-2xl">Hire Me</h1>

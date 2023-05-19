@@ -1,5 +1,7 @@
+'use client'
 import React, {useState, useEffect} from 'react'
 import Box from "./utils/Box"
+import {inter, dm_sans, roboto_mono} from "./utils/font"
 
 const boxes = [
   {
@@ -45,7 +47,7 @@ const Works = () => {
             <Box key={index} headline={box.headline} desc={box.desc} project={box.project}/>
         ))}
         </div>
-        <div className={`text text-white font-Roboto_mono mx-auto ${lower1075 ? "w-11/12": "w-10/12"} ${lower790? "w-9/12 mt-10": ""}`}>
+        <div className={`text text-white ${roboto_mono.className} mx-auto ${lower1075 ? "w-11/12": "w-10/12"} ${lower790? "w-9/12 mt-10": ""}`}>
           <p className='opacity-60 '>Introduce</p>
           <h1 className={` ${lower1075 ? "text-3.5xl": "text-4xl"}`}>Hello! I&apos;m Satender</h1>
           <h1 className={` ${lower1075 ? "text-3.5xl mb-5": "text-4xl mb-7"}`}>Maurya</h1>

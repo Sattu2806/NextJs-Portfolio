@@ -1,6 +1,8 @@
+'use client'
 import React, {useState, useEffect} from "react";
 import Client from "./utils/client";
 import { BsQuote } from "react-icons/bs";
+import {inter, dm_sans, roboto_mono} from "./utils/font"
 
 
 const testimonials = [
@@ -50,11 +52,11 @@ const Testimonials = () => {
       }, [])
   return (
     <section id="testimonials" className={` m-auto mb-20 ${below1225 ? "w-10/12 mt-20" :"w-8/12 mt-32"}`}>
-      <div className={` text-white font-Roboto_mono mb-20  ${below1225 ? "w-10/12":"w-8/12" } ${below850 ? "":"flex justify-between items-baseline" } `}>
+      <div className={` text-white ${roboto_mono.className} mb-20  ${below1225 ? "w-10/12":"w-8/12" } ${below850 ? "":"flex justify-between items-baseline" } `}>
         <h1 className={` mb-2 ${below850 ? "text-3.5xl" : "text-4xl"}`}>Testimonials</h1>
         <p className="opacity-70">What&apos;s Clients say about me</p>
       </div>
-      <div className=" relative testimonialBox text-white font-Roboto_mono bg-gray3 py-10">
+      <div className={` relative testimonialBox text-white ${roboto_mono.className}  bg-gray3 py-10`}>
         <div className={` m-auto ${below630 ? "w-10/12": "w-8/12"}`}>
             <p className="opacity-75 text-sm mb-5 italic">Here is our clients thought</p>
             <p className="mb-5">{testimonials[selectedClient].name}</p>

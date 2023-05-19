@@ -1,8 +1,10 @@
+'use client'
 import React, {useState, useEffect} from 'react'
 import rightImage from "../public/3.png"
 import leftImage1 from "../public/2.png"
 import leftImage2 from "../public/4.png"
 import Image from 'next/image'
+import {inter, dm_sans, roboto_mono} from "./utils/font"
 
 const Works = () => {
   const [lower1200, setlower1200] = useState(false);
@@ -26,7 +28,7 @@ const Works = () => {
   return (
     <section id='works' className='bg-gray3'>
       <hr className='text-green opacity-10' />
-      <div className={`inner ${lower850 ? "" : "grid grid-cols-1"} m-auto pt-10 pb-10 text-white font-Roboto_mono ${lower1200 ? "w-11/12" : "w-10/12"}`}>
+      <div className={`inner ${lower850 ? "" : "grid grid-cols-1"} m-auto pt-10 pb-10 text-white ${roboto_mono.className} ${lower1200 ? "w-11/12" : "w-10/12"}`}>
         <div className={`  ${lower850 ? "flex flex-col  justify-center items-center" : "grid grid-rows-3"}`}>
             <div className={`text1 ${lower850 ? "w-8/12 m-auto": ""}`}>
                 <h1 className={` mb-2 ${lower450 ? "text-3.5xl": "text-4xl"}`}>Latest Work</h1>

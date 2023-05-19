@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -8,32 +9,11 @@ module.exports = {
   important: true,
   theme: {
     extend: {
-      fontFamily: {
-        Inter: "Inter, sans-serif",
-        Roboto_mono: "Roboto Mono , monospace",
-        Dm_Sans: "'DM Sans , sans-serif",
-      },
-      colors: {
-        green: "#48bf53",
-        white: "#ffffff",
-        black: "#000000",
-        gray: "#888888",
-        gray2: "#242B2E",
-        gray3: "#1E1F21",
-        darkgray: "#1A1C20",
-        light_gray: "#ececec",
-        red: "#DD0031",
-        blue: "#1560BD",
-        react: "#61DBFB",
-        background: "#303336",
-    },
       backgroundImage: (theme) => ({
-        "gradient-primary": `linear-gradient(to right, ${theme(
-          "colors.green"
-        )}, ${theme("colors.black")})`,
         "gradient-primary-2":
           "linear-gradient(140.3deg, rgba(44, 47, 50, 0.99) 15.21%, rgba(28, 29, 30, 0.94) 29.99%, rgba(40, 41, 41, 0.8) 46.43%, rgba(16, 16, 16, 0.71) 64.3%, rgba(25, 25, 26, 0.3) 86.01%)",
-      })},
+      }),
+    },
     lineHeight: {
       "extra-loose": "2.5",
       12: "3.3rem",
@@ -60,6 +40,20 @@ module.exports = {
       "5xl": "3.052rem",
       "6xl": "4rem",
     },
+    colors: {
+      green: "#48bf53",
+      white: "#ffffff",
+      black: "#000000",
+      gray: "#888888",
+      gray2: "#242B2E",
+      gray3: "#1E1F21",
+      darkgray: "#1A1C20",
+      light_gray: "#ececec",
+      red: "#DD0031",
+      blue: "#1560BD",
+      react: "#61DBFB",
+      background: "#303336",
+    },
     boxShadow: {
       xl: "0px 4px 40px 1px rgb(76 33 33 / 50%)",
       "2xl": "0px 4px 40px 1px rgb(51 68 53 / 30%)",
@@ -73,4 +67,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+}
